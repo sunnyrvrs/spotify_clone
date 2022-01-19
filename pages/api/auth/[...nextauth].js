@@ -42,7 +42,7 @@ export default NextAuth({
     // ...add more providers here
   ],
   // How we encrypt the JWT tokens
-  secret: process.env.JWT_SECRET,
+  secret: process.env.JWT_PRIVATE_KEY.replace(/\\n/gm, '\n'),
   pages: {
       signIn: "/login"
   },
